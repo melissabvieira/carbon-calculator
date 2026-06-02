@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Emissão de CO₂</title>
+    <link rel="stylesheet" href="/carbon-calculator/css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="header__title">🌱 Calculadora de Emissão de CO₂</h1>
+        <p class="header__subtitle">
+            Calcule a emissão de CO₂ gerada por diferentes meios de transporte.
+        </p>
+    </header>
+
+    <main class="main">
+
+        <section class="calculator" id="calculator">
+            <h2 class="calculator__title">Calculadora</h2>
+
+            <form class="calculator__form" id="co2-form">
+
+                <div class="calculator__field">
+                    <label class="calculator__label" for="transport">
+                        Meio de transporte:
+                    </label>
+
+                    <select class="calculator__select" id="transport" name="transport">
+                        <option value="bicycle">Bicicleta</option>
+                        <option value="car">Carro</option>
+                        <option value="bus">Ônibus</option>
+                        <option value="truck">Caminhão</option>
+                    </select>
+                </div>
+
+                <div class="calculator__field">
+                    <label class="calculator__label" for="origin">
+                        Origem:
+                    </label>
+
+                    <input
+                        class="calculator__input"
+                        type="text"
+                        id="origin"
+                        name="origin"
+                        placeholder="Ex: São Paulo"
+                    >
+                </div>
+
+                <div class="calculator__field">
+                    <label class="calculator__label" for="destination">
+                        Destino:
+                    </label>
+
+                    <input
+                        class="calculator__input"
+                        type="text"
+                        id="destination"
+                        name="destination"
+                        placeholder="Ex: Rio de Janeiro"
+                    >
+                </div>
+
+                <div class="calculator__field">
+                    <label class="calculator__label" for="distance">
+                        Distância total:
+                    </label>
+
+                    <input 
+                        class="calculator__input"
+                        type="number"
+                        id="distance"
+                        name="distance"
+                        placeholder="Será preenchida automaticamente"
+                        readonly
+                    >
+
+                    <small class="calculator__help">
+                        A distância será preenchida automaticamente.
+                    </small>
+                </div>
+
+                <button class="calculator__button" type="submit">
+                    Calcular Emissão
+                </button>
+
+            </form>
+        </section>
+
+        <section class="results" id="results" hidden>
+            <h2 class="results__title">Resultados</h2>
+
+            <div class="results__content" id="results-content"></div>
+
+            <section class="comparison" id="comparison">
+                <h3 class="comparison__title">Comparação</h3>
+                <div class="comparison__content" id="comparison-content"></div>
+            </section>
+
+            <section class="carbon-credits" id="carbon-credits">
+                <h3 class="carbon-credits__title">Créditos de Carbono</h3>
+                <div class="carbon-credits__content" id="carbon-credits-content"></div>
+            </section>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">&copy; 2026 - Calculadora de Emissão de CO₂</p>
+    </footer>
+
+    <script src="/carbon-calculator/js/routes-data.js"></script>
+    <script src="/carbon-calculator/js/config.js"></script>
+
+</body>
+</html>
