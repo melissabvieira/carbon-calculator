@@ -24,9 +24,3 @@ A Calculadora de Pegada de Carbono permite estimar a emissão de CO₂ gerada po
 
 O projeto foi criado como prática de desenvolvimento front-end, aplicando conceitos de estrutura HTML, estilização com CSS e lógica de programação com JavaScript.
 
-## Como executar
-
-1. Clone o repositório:
-
-```bash
-git clone https://github.com/melissabvieira/carbon-calculator.git
